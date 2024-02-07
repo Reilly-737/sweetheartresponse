@@ -1,12 +1,14 @@
 import React from "react";
-import ValentineQuestion from "./components/VDayQuestion";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import VDayQuestion from "./components/VDayQuestion";
 
 function App() {
   return (
-    <div className="App">
-      <ValentineQuestion />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<VDayQuestion />} />
+      </Routes>
+    </Router>
   );
-}
-
+ }
 export default App;
